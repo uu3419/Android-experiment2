@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorPrimaryDark">#FF303F9F</item>
+        <item name="colorAccent">#FF03A9F4</item>
+    </style>
+
+    <!-- Compose 页面不需要 ActionBar -->
+    <style name="Theme.Compose" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FFC62828</item>
+        <item name="colorAccent">#FFC62828</item>
+        <item name="android:windowBackground">#FFFDFDFD</item>
+    </style>
+</resources>

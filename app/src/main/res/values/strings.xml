@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">实验2 Android界面布局</string>
+
+    <string name="task1_title">1. 线性布局</string>
+    <string name="task2_title">2. 表格布局</string>
+    <string name="task3_title">3. 约束布局1</string>
+    <string name="task4_title">4. 约束布局2</string>
+    <string name="task5_title">5. Compose 实验</string>
+
+    <string name="lab_title">Android 界面布局实验</string>
+    <string name="lab_subtitle">请选择要演示的实验内容：</string>
+
+    <string name="task1_desc">LinearLayout 嵌套实现 4×4 文本网格</string>
+    <string name="task2_desc">TableLayout 实现菜单表格</string>
+    <string name="task3_desc">ConstraintLayout 实现计算器界面</string>
+    <string name="task4_desc">ConstraintLayout + 图片实现太空订票界面</string>
+    <string name="task5_desc">Jetpack Compose 实现课程学习任务清单</string>
+
+    <string name="calc_title">ConstraintLayoutTest</string>
+    <string name="calc_input">Input</string>
+    <string name="calc_zero">0.0</string>
+
+    <string name="space_stations">Space Stations</string>
+    <string name="flights">Flights</string>
+    <string name="rovers">Rovers</string>
+    <string name="dca">DCA</string>
+    <string name="mars">MARS</string>
+    <string name="one_way">One Way</string>
+    <string name="traveller">1 Traveller</string>
+    <string name="depart">DEPART</string>
+
+    <string name="table_header">Hello TableLayout</string>
+</resources>

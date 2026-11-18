@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 实验3：ConstraintLayout 实现计算器界面（4 列按钮以 Guideline 对齐） -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/teal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="@string/calc_title"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/calc_input"
+        android:textColor="#FF9E9E9E"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/display_bg"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="12dp"
+        android:text="@string/calc_zero"
+        android:textColor="#FF424242"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_input" />
+
+    <!-- 四列基准线 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <!-- 第一行 7 8 9 + -->
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="7"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g1"
+        app:layout_constraintStart_toStartOf="@id/g1"
+        app:layout_constraintTop_toBottomOf="@id/tv_display" />
+
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="8"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g2"
+        app:layout_constraintStart_toStartOf="@id/g2"
+        app:layout_constraintTop_toTopOf="@id/b7" />
+
+    <Button
+        android:id="@+id/b9"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="9"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g3"
+        app:layout_constraintStart_toStartOf="@id/g3"
+        app:layout_constraintTop_toTopOf="@id/b7" />
+
+    <Button
+        android:id="@+id/bPlus"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="+"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g4"
+        app:layout_constraintStart_toStartOf="@id/g4"
+        app:layout_constraintTop_toTopOf="@id/b7" />
+
+    <!-- 第二行 4 5 6 - -->
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="4"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g1"
+        app:layout_constraintStart_toStartOf="@id/g1"
+        app:layout_constraintTop_toBottomOf="@id/b7" />
+
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="5"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g2"
+        app:layout_constraintStart_toStartOf="@id/g2"
+        app:layout_constraintTop_toTopOf="@id/b4" />
+
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="6"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g3"
+        app:layout_constraintStart_toStartOf="@id/g3"
+        app:layout_constraintTop_toTopOf="@id/b4" />
+
+    <Button
+        android:id="@+id/bMinus"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="-"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g4"
+        app:layout_constraintStart_toStartOf="@id/g4"
+        app:layout_constraintTop_toTopOf="@id/b4" />
+
+    <!-- 第三行 1 2 3 * -->
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="1"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g1"
+        app:layout_constraintStart_toStartOf="@id/g1"
+        app:layout_constraintTop_toBottomOf="@id/b4" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="2"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g2"
+        app:layout_constraintStart_toStartOf="@id/g2"
+        app:layout_constraintTop_toTopOf="@id/b1" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="3"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g3"
+        app:layout_constraintStart_toStartOf="@id/g3"
+        app:layout_constraintTop_toTopOf="@id/b1" />
+
+    <Button
+        android:id="@+id/bMul"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="*"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g4"
+        app:layout_constraintStart_toStartOf="@id/g4"
+        app:layout_constraintTop_toTopOf="@id/b1" />
+
+    <!-- 第四行 . 0 = / -->
+    <Button
+        android:id="@+id/bDot"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="."
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g1"
+        app:layout_constraintStart_toStartOf="@id/g1"
+        app:layout_constraintTop_toBottomOf="@id/b1" />
+
+    <Button
+        android:id="@+id/b0"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="0"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g2"
+        app:layout_constraintStart_toStartOf="@id/g2"
+        app:layout_constraintTop_toTopOf="@id/bDot" />
+
+    <Button
+        android:id="@+id/bEq"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="="
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g3"
+        app:layout_constraintStart_toStartOf="@id/g3"
+        app:layout_constraintTop_toTopOf="@id/bDot" />
+
+    <Button
+        android:id="@+id/bDiv"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:background="@color/key_bg"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="/"
+        android:textColor="#FF212121"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/g4"
+        app:layout_constraintStart_toStartOf="@id/g4"
+        app:layout_constraintTop_toTopOf="@id/bDot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

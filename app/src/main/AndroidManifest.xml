@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LinearLayoutDemo"
+            android:label="@string/task1_title"
+            android:exported="false" />
+
+        <activity
+            android:name=".TableLayoutDemo"
+            android:label="@string/task2_title"
+            android:exported="false" />
+
+        <activity
+            android:name=".CalculatorDemo"
+            android:label="@string/task3_title"
+            android:exported="false" />
+
+        <activity
+            android:name=".SpaceDemo"
+            android:label="@string/task4_title"
+            android:exported="false" />
+
+        <activity
+            android:name=".ComposeTodoActivity"
+            android:label="@string/task5_title"
+            android:theme="@style/Theme.Compose"
+            android:exported="false" />
+
+    </application>
+</manifest>

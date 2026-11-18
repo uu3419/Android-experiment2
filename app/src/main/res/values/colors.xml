@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#FF3F51B5</color>
+    <color name="teal">#FF009688</color>
+    <color name="cell_border">#FF8A8A8A</color>
+    <color name="cell_bg">#FF101010</color>
+    <color name="cell_text">#FFBDBDBD</color>
+    <color name="table_bg">#FF1B1B1B</color>
+    <color name="table_header_bg">#FF909090</color>
+    <color name="table_label">#FFE0E0E0</color>
+    <color name="table_shortcut">#FFBBBBBB</color>
+    <color name="display_bg">#FFC7C29B</color>
+    <color name="key_bg">#FFDDDDDD</color>
+    <color name="space_green">#FF1B6B3E</color>
+    <color name="space_orange">#FFC0561F</color>
+    <color name="tab_selected">#FFE1F5FE</color>
+    <color name="page_bg">#FFF5F5F5</color>
+</resources>
